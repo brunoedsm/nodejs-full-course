@@ -1,0 +1,16 @@
+<%- include('common/header'); -%>
+    
+<form method="post">
+    <label>
+        Name <input type="text" name="name" value="<%= contact ? contact.name : '' %>">
+    </label>
+    <label>
+        Email <input type="text" name="email" value="<%= contact ? contact.email : '' %>">
+    </label>
+    <label>
+        Phone <input type="text" name="phone" value="<%= contact ? contact.phone : '' %>">
+    </label>
+    <button type="submit">Save</button>
+</form>
+
+<%- include('common/footer'); -%>

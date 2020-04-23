@@ -1,0 +1,24 @@
+<%- include('common/header'); -%>
+
+<% if (contacts.length > 0) { %>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% contacts.forEach(contact => { %>
+                <%- include('contact-row', { contact }) %>
+            <% }); %>
+        </tbody>
+    </table>
+<% } else { %>
+    <p>No contacts</p>
+<% } %>
+
+<%- include('common/footer'); -%>

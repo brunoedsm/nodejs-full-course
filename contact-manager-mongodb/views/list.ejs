@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Manager</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Manager</h1>
+        <ul>
+            <li>List</li>
+            <li><a href="/0/edit">Add</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <% if (contacts.length > 0) { %>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% contacts.forEach(contact => { %>
+                        <tr>
+                            <td><%= contact.id %></td>
+                            <td><%= contact.name %></td>
+                            <td><%= contact.email %></td>
+                            <td><%= contact.phone %></td>
+                            <td>
+                                <a href="/<%= contact.id %>/edit">Edit</a>
+                                <a href="/<%= contact.id %>/delete">Delete</a>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        <% } else { %> 
+            <p>No contacts</p>
+        <% } %>
+    </div>
+</body>
+</html>

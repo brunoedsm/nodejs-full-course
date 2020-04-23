@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Manager</title>
+
+    <link rel="stylesheet" href="/css/style.css">    
+</head>
+<body>
+    <header>
+        <h1>Contact Manager</h1>
+        <ul>
+            <li><a href="/">List</a></li>
+            <li>Add</li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <form method="post">
+            <label>
+                Name 
+                <input type="text" name="name" value="<%= contact ? contact.name: '' %>">
+            </label>
+            <label>
+                Email 
+                <input type="email" name="email" value="<%= contact ? contact.email: '' %>">
+            </label>
+            <label>
+                Phone 
+                <input type="text" name="phone" value="<%= contact ? contact.phone: '' %>">
+            </label>
+            <button type="submit">Save</button>
+        </form>
+    </div>
+</body>
+</html>
