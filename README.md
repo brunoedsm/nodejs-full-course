@@ -1,2 +1,2 @@
-# nodejs
-NodeJS Concepts and Projects
+# nodejs-full-course
+NodeJS 30 hours training apps
